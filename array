@@ -2,30 +2,34 @@
 using namespace std;
 
 
+void ReverseArray(int array[], int start, int end)
+
+wihile (start < end)
+{
+  int temp = array[start];
+  array[start] = array[end];
+  array[end] = temp;
+  start++;
+  end--;
+}
+
+void printArray(int array[], int size)
+{
+  for (int i = 0; i < size; i++)
+  {
+    cout << array[i] << " ";
+    cout << endl;
+  }
+}
+
 int main()
 {
-string array1[50];
-string array2[50];
-int size;
-int j++;
+  int array[] = {1, 2, 3, 4};
+  printArray(array, 4);
+  ReverseArray(array, 0, 3);
+  cout << "Revese array is: "
 
-cout << "How many elements would you like to enter? "
-cin >> size;
+  printArray(array, 4);
 
-cout << "Enter in " << size << " elements: ";
-for(int i = 0; i < size; i++)
-{
-cin >> array1[i];
-}
-cout << "The numbers but reversed: ";
-for(int i = size - 1; i >= 0; i--, j++)
-{
-array[i]=array1[j];
-}
-for (int i = 0; i < size; i++)
-{
-cout << array2[i];
-}
-
-
+  return 0; 
 }
