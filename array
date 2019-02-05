@@ -4,7 +4,7 @@ using namespace std;
 
 void ReverseArray(int array[], int start, int end)
 
-wihile (start < end)
+while (start < end)
 {
   int temp = array[start];
   array[start] = array[end];
