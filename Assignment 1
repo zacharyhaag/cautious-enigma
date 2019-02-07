@@ -10,10 +10,14 @@ struct PERSON
 
 int main()
 {
+  fsream inputfile;
+  inputfile.open("data.txt");
   PERSON customer;
   cout << "Please enter your name: ";
   cin.ignore();
-  getline(cin, customer.Name); 
+  getline(cin, customer.Name);
+
+  
 
 
 
