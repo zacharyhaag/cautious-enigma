@@ -19,7 +19,7 @@ int main()
 
   string str1, str2, sname;
   ifstream fin;
-  fin.open("data.txt");
+  fin.open("data.txt"); //go to titanium. find google doc and make txt file to read from 
   PERSON customer;
   customer.Balance[N]; //needs work here
 
