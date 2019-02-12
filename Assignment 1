@@ -21,7 +21,7 @@ int main()
   ifstream fin;
   fin.open("data.txt");
   PERSON customer;
-  customer.Balance[N];
+  customer.Balance[N]; //needs work here
 
 if (fin.is_open())
 cout << "Name\t\tBalance" << endl;
