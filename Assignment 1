@@ -1,23 +1,49 @@
 #include <iostream>
 #include <fstream>
+#include <string>
+#include <cstring>
+#include <iomanip>
 using namespace std;
 
 struct PERSON
 {
-  string Name[20];
+  char Name[20] ;
   float Balance;
+  int array[10];
+
 };
 
 int main()
 {
-  fsream inputfile;
-  inputfile.open("data.txt");
-  PERSON customer;
-  cout << "Please enter your name: ";
-  cin.ignore();
-  getline(cin, customer.Name);
 
-  
+
+  string str1, str2, sname;
+  ifstream fin;
+  fin.open("data.txt");
+  PERSON customer;
+  customer.Balance[N];
+
+if (fin.is_open())
+cout << "Name\t\tBalance" << endl;
+cout << "--------------------------------------" << endl;
+{
+while(!fin.eof())
+{
+  fin >> str1;
+  fin >> str2;
+  sname = str1 + " " + str2;
+  strcpy(customer.Name, sname.c_str());
+
+
+  cout << customer.Name << '\0' << "\t";
+
+
+
+
+
+}
+}
+fin.close();
 
 
 
