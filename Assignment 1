@@ -13,15 +13,16 @@ struct PERSON
 
 };
 
+void FindRichest(PERSON Balance, PERSON Name);
+
 int main()
 {
 
-
   string str1, str2, sname;
   ifstream fin;
-  fin.open("data.txt"); //go to titanium. find google doc and make txt file to read from 
+  fin.open("data.txt"); //go to titanium. find google doc and make txt file to read from
   PERSON customer;
-  customer.Balance[N]; //needs work here
+
 
 if (fin.is_open())
 cout << "Name\t\tBalance" << endl;
@@ -33,19 +34,43 @@ while(!fin.eof())
   fin >> str2;
   sname = str1 + " " + str2;
   strcpy(customer.Name, sname.c_str());
-
-
-  cout << customer.Name << '\0' << "\t";
-
-
+  fin >> customer.Balance;
+  cout << customer.Name << "   ";
+  cout << setprecision(2);
+  cout << customer.Balance << endl;
+  
 
 
 
 }
+FindRichest(customer, customer);
 }
 fin.close();
 
 
 
 return 0;
+}
+
+void FindRichest(PERSON Balance, PERSON Name)
+{
+  ifstream fin;
+  fin.open("data.txt");
+  int counter = 0;
+  double number, max;
+  if (fin.is_open())
+  {
+    int largest = 0;
+    int number_from_file = 0;
+
+    while (fin >> number_from_file)
+       {
+           if (number_from_file > largest)
+           {
+               largest = number_from_file;
+           }
+       }
+
+  cout << "Maximum value is: " << largest << endl;
+}
 }
