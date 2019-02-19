@@ -1,0 +1,44 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <cstring>
+
+using namespace std;
+const int NAME_SIZE = 51, BALANCE = 51;
+
+struct info
+{
+  char name[NAME_SIZE];
+  float balance[BALANCE];
+};
+
+int main()
+{
+  info person;
+  fstream people;
+  string str1, str2, sname;
+  people.open("data1.txt", ios::in | ios::binary);
+
+  if (!people)
+  {
+    cout << "Error opening file.";
+    return 0;
+  }
+  cout << "here are thing: \n\n";
+  people.read(reinterpret_cast<char *>(&person), sizeof(person));
+  while (!people.eof())
+  {
+  people >> str1;
+  people >> str2;
+  sname = str1 + " " + str2;
+  strcpy(person.name, sname.c_str());
+    cout << "Name: ";
+    cout << person.name << endl;
+    cout << "Money: ";
+    cout << person.balance << endl;
+  }
+  cout << "yues" << endl;
+  people.close();
+
+  return 0;
+}
