@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int *intptr1;
+int *intptr2;
+
+intptr1 = new int;
+*intptr1 = 42;
+intptr2 = intptr1;
+cout << "Value 1 is: "<< *intptr1 << endl;
+cout << "Value 2 is: " <<*intptr2 << endl;
+*intptr2 = 53;
+cout << "Value 1 is: "<< *intptr1 << endl;
+cout << "Value 2 is: " <<*intptr2 << endl;
+
+intptr1 = new int;
+*intptr1 = 88;
+cout << "Value 1 is: "<< *intptr1 << endl;
+cout << "Value 2 is: " <<*intptr2 << endl;
+
+delete intptr1;
+intptr1 = NULL;
+
+
+  return 0;
+}
