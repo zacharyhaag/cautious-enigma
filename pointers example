@@ -22,7 +22,9 @@ cout << "Value 1 is: "<< *intptr1 << endl;
 cout << "Value 2 is: " <<*intptr2 << endl;
 
 delete intptr1;
-intptr1 = NULL;
+delete intptr2;
+intptr1 = nullptr;
+intptr2 = nullptr;
 
 
   return 0;
